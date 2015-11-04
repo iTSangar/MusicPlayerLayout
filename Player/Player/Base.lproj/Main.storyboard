@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Player" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,65 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="andre&amp;felipe" translatesAutoresizingMaskIntoConstraints="NO" id="Fm3-UD-44p">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <animations/>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vpu-Zu-DtW">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="LTr-eo-qDE">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="andre&amp;felipe" translatesAutoresizingMaskIntoConstraints="NO" id="aHe-hY-MEM">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="350"/>
+                                            <animations/>
+                                        </imageView>
+                                        <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="tRl-PC-Uxp" customClass="Skuby" customModule="Player" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="351" width="600" height="31"/>
+                                            <animations/>
+                                            <color key="minimumTrackTintColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        </slider>
+                                    </subviews>
+                                    <animations/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="aHe-hY-MEM" secondAttribute="trailing" id="7oZ-bD-cxc"/>
+                                        <constraint firstItem="aHe-hY-MEM" firstAttribute="top" secondItem="LTr-eo-qDE" secondAttribute="top" id="Esb-fw-WnZ"/>
+                                        <constraint firstItem="aHe-hY-MEM" firstAttribute="leading" secondItem="LTr-eo-qDE" secondAttribute="leading" id="F5O-F7-Jpc"/>
+                                        <constraint firstAttribute="trailing" secondItem="tRl-PC-Uxp" secondAttribute="trailing" constant="2" id="WIn-6H-BuK"/>
+                                        <constraint firstItem="tRl-PC-Uxp" firstAttribute="top" secondItem="aHe-hY-MEM" secondAttribute="bottom" constant="1" id="go1-tn-3cD"/>
+                                        <constraint firstAttribute="bottom" secondItem="tRl-PC-Uxp" secondAttribute="bottom" constant="219" id="j4i-WW-lr6"/>
+                                        <constraint firstItem="tRl-PC-Uxp" firstAttribute="leading" secondItem="LTr-eo-qDE" secondAttribute="leading" constant="2" id="q2H-BM-KRF"/>
+                                    </constraints>
+                                </view>
+                                <animations/>
+                                <blurEffect style="extraLight"/>
+                            </visualEffectView>
+                        </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Vpu-Zu-DtW" secondAttribute="bottom" id="Btm-0S-nDL"/>
+                            <constraint firstAttribute="trailing" secondItem="Fm3-UD-44p" secondAttribute="trailing" id="MbQ-wu-4TC"/>
+                            <constraint firstItem="Fm3-UD-44p" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="TRH-nI-GYw"/>
+                            <constraint firstItem="Vpu-Zu-DtW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Zdv-sg-Ek8"/>
+                            <constraint firstItem="Fm3-UD-44p" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="bZm-nM-vlG"/>
+                            <constraint firstItem="Vpu-Zu-DtW" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="fMm-MH-U3U"/>
+                            <constraint firstAttribute="trailing" secondItem="Vpu-Zu-DtW" secondAttribute="trailing" id="m8K-i3-Z7D"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Fm3-UD-44p" secondAttribute="bottom" id="z1T-94-LAP"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="skub" destination="tRl-PC-Uxp" id="NP7-rk-dyr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="565" y="490"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="andre&amp;felipe" width="250" height="250"/>
+    </resources>
 </document>

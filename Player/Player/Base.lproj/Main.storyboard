@@ -3,6 +3,9 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -14,38 +17,104 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="andre&amp;felipe" translatesAutoresizingMaskIntoConstraints="NO" id="Fm3-UD-44p">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <animations/>
                             </imageView>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vpu-Zu-DtW">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="LTr-eo-qDE">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="andre&amp;felipe" translatesAutoresizingMaskIntoConstraints="NO" id="aHe-hY-MEM">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="350"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="andre&amp;felipe" translatesAutoresizingMaskIntoConstraints="NO" id="aHe-hY-MEM">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="414"/>
                                             <animations/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="aHe-hY-MEM" secondAttribute="height" multiplier="1:1" priority="900" id="5EI-VJ-lEI"/>
+                                            </constraints>
                                         </imageView>
-                                        <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="tRl-PC-Uxp" customClass="Skuby" customModule="Player" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="351" width="600" height="31"/>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i4A-I7-YSa">
+                                            <rect key="frame" x="0.0" y="414" width="414" height="322"/>
+                                            <subviews>
+                                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="tRl-PC-Uxp" customClass="Skuby" customModule="Player" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="-17" width="414" height="31"/>
+                                                    <animations/>
+                                                    <color key="minimumTrackTintColor" red="0.94509803921568625" green="0.51764705882352935" blue="0.21568627450980393" alpha="1" colorSpace="calibratedRGB"/>
+                                                </slider>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0:04" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qNz-56-2ZP">
+                                                    <rect key="frame" x="15" y="12" width="27" height="15"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-3:58" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mh7-AU-4H1">
+                                                    <rect key="frame" x="367" y="12" width="32" height="15"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tem Alguém Aqui (Ao Vivo)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FLT-yc-tVZ">
+                                                    <rect key="frame" x="8" y="54" width="398" height="21"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="André e Felipe –– Acelera e Pisa" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S1K-2Z-Ncp">
+                                                    <rect key="frame" x="8" y="79" width="398" height="16"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="13"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                             <animations/>
-                                            <color key="minimumTrackTintColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
-                                        </slider>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstItem="qNz-56-2ZP" firstAttribute="leading" secondItem="i4A-I7-YSa" secondAttribute="leadingMargin" constant="7" id="0SD-eA-JXE"/>
+                                                <constraint firstItem="FLT-yc-tVZ" firstAttribute="centerX" secondItem="i4A-I7-YSa" secondAttribute="centerX" id="5ww-yo-2iD"/>
+                                                <constraint firstItem="FLT-yc-tVZ" firstAttribute="trailing" secondItem="i4A-I7-YSa" secondAttribute="trailingMargin" id="8p7-Iv-5EN"/>
+                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="202" id="K5v-YT-7WM"/>
+                                                <constraint firstItem="qNz-56-2ZP" firstAttribute="top" secondItem="tRl-PC-Uxp" secondAttribute="bottom" constant="-1" id="Q01-jx-dit"/>
+                                                <constraint firstItem="FLT-yc-tVZ" firstAttribute="leading" secondItem="i4A-I7-YSa" secondAttribute="leadingMargin" id="Tf1-0E-YQ1"/>
+                                                <constraint firstItem="S1K-2Z-Ncp" firstAttribute="trailing" secondItem="i4A-I7-YSa" secondAttribute="trailingMargin" id="Vd8-72-Yx2"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Mh7-AU-4H1" secondAttribute="trailing" constant="7" id="aUv-7w-abY"/>
+                                                <constraint firstItem="FLT-yc-tVZ" firstAttribute="centerY" secondItem="i4A-I7-YSa" secondAttribute="centerY" multiplier="2:5" id="aZu-Uv-b94"/>
+                                                <constraint firstItem="Mh7-AU-4H1" firstAttribute="top" secondItem="tRl-PC-Uxp" secondAttribute="bottom" constant="-1" id="b6Q-tJ-SGp"/>
+                                                <constraint firstItem="tRl-PC-Uxp" firstAttribute="centerX" secondItem="i4A-I7-YSa" secondAttribute="centerX" id="bzo-Em-fSm"/>
+                                                <constraint firstItem="tRl-PC-Uxp" firstAttribute="top" secondItem="i4A-I7-YSa" secondAttribute="top" constant="-17" id="cxT-wC-3sO"/>
+                                                <constraint firstAttribute="trailing" secondItem="tRl-PC-Uxp" secondAttribute="trailing" constant="2" id="hOU-p8-ZZR"/>
+                                                <constraint firstItem="S1K-2Z-Ncp" firstAttribute="leading" secondItem="i4A-I7-YSa" secondAttribute="leadingMargin" id="i8w-iF-sAz"/>
+                                                <constraint firstItem="S1K-2Z-Ncp" firstAttribute="top" secondItem="FLT-yc-tVZ" secondAttribute="bottom" constant="4" id="kyG-md-eoe"/>
+                                                <constraint firstItem="tRl-PC-Uxp" firstAttribute="leading" secondItem="i4A-I7-YSa" secondAttribute="leading" constant="2" id="skW-fB-SLl"/>
+                                            </constraints>
+                                        </view>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mask" translatesAutoresizingMaskIntoConstraints="NO" id="RGk-aw-pcO">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="65"/>
+                                            <animations/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="65" id="WkZ-dv-SJw"/>
+                                            </constraints>
+                                        </imageView>
                                     </subviews>
                                     <animations/>
                                     <constraints>
-                                        <constraint firstAttribute="trailing" secondItem="aHe-hY-MEM" secondAttribute="trailing" id="7oZ-bD-cxc"/>
-                                        <constraint firstItem="aHe-hY-MEM" firstAttribute="top" secondItem="LTr-eo-qDE" secondAttribute="top" id="Esb-fw-WnZ"/>
-                                        <constraint firstItem="aHe-hY-MEM" firstAttribute="leading" secondItem="LTr-eo-qDE" secondAttribute="leading" id="F5O-F7-Jpc"/>
-                                        <constraint firstAttribute="trailing" secondItem="tRl-PC-Uxp" secondAttribute="trailing" constant="2" id="WIn-6H-BuK"/>
-                                        <constraint firstItem="tRl-PC-Uxp" firstAttribute="top" secondItem="aHe-hY-MEM" secondAttribute="bottom" constant="1" id="go1-tn-3cD"/>
-                                        <constraint firstAttribute="bottom" secondItem="tRl-PC-Uxp" secondAttribute="bottom" constant="219" id="j4i-WW-lr6"/>
-                                        <constraint firstItem="tRl-PC-Uxp" firstAttribute="leading" secondItem="LTr-eo-qDE" secondAttribute="leading" constant="2" id="q2H-BM-KRF"/>
+                                        <constraint firstAttribute="bottom" secondItem="i4A-I7-YSa" secondAttribute="bottom" id="Kg5-bl-v6u"/>
+                                        <constraint firstAttribute="trailing" secondItem="i4A-I7-YSa" secondAttribute="trailing" id="NZs-Jg-G5z"/>
+                                        <constraint firstItem="i4A-I7-YSa" firstAttribute="top" secondItem="aHe-hY-MEM" secondAttribute="bottom" id="Pa3-p5-gu1"/>
+                                        <constraint firstAttribute="trailing" secondItem="aHe-hY-MEM" secondAttribute="trailing" id="YnS-Yv-wFD"/>
+                                        <constraint firstItem="aHe-hY-MEM" firstAttribute="top" secondItem="LTr-eo-qDE" secondAttribute="top" id="aOG-ra-YVw"/>
+                                        <constraint firstAttribute="trailing" secondItem="RGk-aw-pcO" secondAttribute="trailing" id="bLU-p1-gpf"/>
+                                        <constraint firstItem="i4A-I7-YSa" firstAttribute="leading" secondItem="LTr-eo-qDE" secondAttribute="leading" id="huZ-7O-2Sn"/>
+                                        <constraint firstItem="aHe-hY-MEM" firstAttribute="leading" secondItem="LTr-eo-qDE" secondAttribute="leading" id="sWE-BL-Zlj"/>
+                                        <constraint firstItem="RGk-aw-pcO" firstAttribute="leading" secondItem="LTr-eo-qDE" secondAttribute="leading" id="snQ-fT-HGI"/>
+                                        <constraint firstItem="RGk-aw-pcO" firstAttribute="top" secondItem="LTr-eo-qDE" secondAttribute="top" id="xU0-GH-MEb"/>
                                     </constraints>
                                 </view>
                                 <animations/>
@@ -65,6 +134,7 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Fm3-UD-44p" secondAttribute="bottom" id="z1T-94-LAP"/>
                         </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
                         <outlet property="skub" destination="tRl-PC-Uxp" id="NP7-rk-dyr"/>
                     </connections>
@@ -76,5 +146,6 @@
     </scenes>
     <resources>
         <image name="andre&amp;felipe" width="250" height="250"/>
+        <image name="mask" width="375" height="65"/>
     </resources>
 </document>

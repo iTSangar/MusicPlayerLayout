@@ -12,7 +12,7 @@ class Skuby: UISlider {
     override func trackRectForBounds(bounds: CGRect) -> CGRect {
         var result = super.trackRectForBounds(bounds)
         result.origin.x = -1
-        result.size.height = 4
+        result.size.height = 3
         result.size.width = bounds.size.width + 2
         return result
     }

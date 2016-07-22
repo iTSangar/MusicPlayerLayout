@@ -1,2 +1,2 @@
 # MusicPlayerLayout
-Apple Music - Auto layout and layout constraints
+Apple Music - Auto layout and constraints
